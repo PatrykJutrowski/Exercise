@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="Zadanie1.css" rel="stylesheet" type="text/css">
+    <script src="Zadanie1.js" defer></script>
+</head>
+<body>
+  <div class="body">
+    <div class="titles">
+        <h4>Sort</h4>
+        <h4>Filter</h4>
+    </div>
+    <div class="controlPanel" id="controlPanel">
+      <button id="sort-age">AGE</button>
+      <button onclick="sortingName()" class="sort-name" id="sort-name" >NAME</button>
+      <input type="number" placeholder="Types" id="input-number" />
+      <label for="input-number"></label>
+    </div>
+    <ul class="UL" id="ulList">
+        <li class="animalElement">
+            <img alt="cat-2" src="dog-1.jpg">
+            <span class="close">&times;</span>
+            <ul class="ulOfLi"  id="li2">
+            </ul>
+        </li>
+        <li class="animalElement">
+            <img alt="cat-1" src="cat-2.jpg">
+            <span class="close">&times;</span>
+            <ul class="ulOfLi" id="li1">
+            </ul>
+        </li>
+        <li class="animalElement">
+            <img alt="dog-1" src="cat-1.jpg">
+            <span class="close">&times;</span>
+            <p class="ulOfLi" id="li">
+            </p>
+        </li>
+    </ul>
+    <div id="backdrop"></div>
+    <div class="modal card" id="add-modal">
+      <div class="modal__content">
+          <label for="name"></label>
+          <input type="text" name='name' id="name" placeholder="NAME" />
+          <label for="imageURL"></label>
+          <input type="text" name="imageURL" id="imageURL" placeholder="url" />
+          <label for="type"></label>
+          <input type="text" name="type" id="type"  placeholder="TYPE"/>
+          <label for="age" ></label>
+          <input
+                  placeholder="AGE"
+                  type="number"
+                  step="1"
+                  max="20"
+                  min="1"
+                  name="age"
+                  id="age"
+          />
+      </div>
+      <div class="modal__actions">
+          <button class="btn btn--passive">Cancel</button>
+          <button class="btn btn--success" id="btn--success">Add</button>
+      </div>
+    </div>
+    <section>
+        <button class="add" >&times;</button>
+    </section>
+  </div>
+</body>
+</html>
